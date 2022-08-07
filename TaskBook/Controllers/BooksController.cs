@@ -66,7 +66,7 @@ namespace TaskBook.Controllers
             return Ok(dto);
         }
 
-        [HttpPut("update")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id,BookPostDto bookDto)
         {
             if (id == 0) return BadRequest();
